@@ -52,161 +52,161 @@ export const QUIZ_STAGES: QuizStage[] = [
   {
     id: 1,
     category: "Demográfico",
-    psyObjective: "Iniciação suave, segmentação e personalização do fluxo de perguntas. Cria uma ancoragem mental sobre a fase atual da criança.",
-    behaviorLogic: "Perguntas de transição inicial simples aumentam consistentemente a taxa de conclusão (efeito micro-comprometimento). O usuário define a quem o diagnóstico se refere.",
-    expectedImpact: "Sensação de que o diagnóstico é personalizado para a faixa etária exata do seu filho.",
+    psyObjective: "Iniciação suave e segmentação simples.",
+    behaviorLogic: "Perguntas iniciais simples ajudam a prender a atenção.",
+    expectedImpact: "Sensação de personalização imediata.",
     title: "Etapa de Identificação",
     subtitle: "Para quem faremos este diagnóstico?",
     question: "Qual é a idade atual do seu filho (ou da criança que você mais se preocupa)?",
     options: [
-      { text: "De 5 a 7 anos (Fase de Formação Primária)", points: 3 },
-      { text: "De 8 a 10 anos (Fase de Transição e Curiosidade Racional)", points: 2 },
-      { text: "De 11 a 13 anos (Fase de Pré-Adolescência e Influência Social)", points: 1 },
-      { text: "14 anos ou mais (Fase de Convicção Autônoma e Crise Identitária)", points: 1 }
+      { text: "De 5 a 7 anos", points: 3 },
+      { text: "De 8 a 10 anos", points: 2 },
+      { text: "De 11 a 13 anos", points: 1 },
+      { text: "14 anos ou mais", points: 1 }
     ]
   },
   {
     id: 2,
     category: "Autopercepção",
-    psyObjective: "Fazer o pai/mãe estimar um diagnóstico preliminar, que frequentemente se provará otimista ou baseado em evidências superficiais.",
-    behaviorLogic: "Ao expressar que o filho está seguro, o usuário cria uma 'tese inicial' que o quiz testará em seguida com perguntas específicas e práticas sobre apologética básica.",
-    expectedImpact: "Curiosidade sobre se o 'muito firme na fé' realmente se sustenta sob pressão de argumentos reais.",
+    psyObjective: "Mapeamento inicial de segurança na fé.",
+    behaviorLogic: "O usuário avalia de cabeça a fé do filho antes do confronto real.",
+    expectedImpact: "Desconforto sutil sobre a real firmeza espiritual.",
     title: "Diagnóstico de Superfície",
-    subtitle: "Como você enxerga a espiritualidade dele hoje?",
-    question: "Com base no comportamento atual do seu filho (frequentar a igreja, orar nas refeições), quão forte você sente que é a fé dele?",
+    subtitle: "Como você vê a fé dele hoje?",
+    question: "De forma sincera, quão forte você sente que é a fé do seu filho atualmente?",
     options: [
-      { text: "Inabalável: Ele ama a Deus e professa sua fé com total firmeza", points: 2 },
-      { text: "Moderada: Ele vai à igreja e aceita tudo, mas nunca o vi defender sua fé de forma ativa", points: 3 },
-      { text: "Frágil: Percebo dúvidas crescentes ou desinteresse em ir aos cultos", points: 4 },
-      { text: "Sinto que ele está apenas repetindo minhas palavras, mas sem convicção própria", points: 5 }
+      { text: "Firme: Ele ama a Deus e vai à igreja com alegria.", points: 2 },
+      { text: "Moderada: Ele vai à igreja, mas quase não fala de Deus em casa.", points: 3 },
+      { text: "Frágil: Percebo dúvidas ou desinteresse em orar e ir aos cultos.", points: 4 },
+      { text: "Apenas costume: Ele repete minhas palavras, mas sem convicção própria.", points: 5 }
     ]
   },
   {
     id: 3,
     category: "Exposição Digital",
-    psyObjective: "Ancoragem quantitativa do perigo invisível. Demonstrar o desequilíbrio entre a influência das redes sociais e a instrução bíblica ativa.",
-    behaviorLogic: "O contraste de números ativa o cérebro lógico (Economia Comportamental). O pai percebe que o celular passa 15x mais tempo com o filho do que ele ensinando a Bíblia.",
-    expectedImpact: "Preocupação imediata ao constatar a enorme janela de influência secular desregulada.",
+    psyObjective: "Contraste consciente do tempo de tela versus tempo de ensino.",
+    behaviorLogic: "Fazer o pai notar o abismo de horas que o celular retém seu filho.",
+    expectedImpact: "Preocupação imediata sobre as influências do telefone.",
     title: "Mapeamento de Exposição",
-    subtitle: "Análise quantitativa do consumo intelectual.",
-    question: "Aproximadamente quantas horas por semana seu filho passa conectado a telas (YouTube, TikTok, Jogos, Redes Sociais, Streaming)?",
+    subtitle: "Tempo de influência externa por dia.",
+    question: "Aproximadamente quanto tempo por dia seu filho passa conectado a telas (Celular, YouTube, Tik Tok)?",
     options: [
-      { text: "Menos de 5 horas por semana (Controle estrito e alta presença familiar)", points: 1 },
-      { text: "Entre 5 e 15 horas por semana (Equilíbrio moderado, consumo monitorado)", points: 3 },
-      { text: "Entre 15 e 30 horas por semana (Mais de 2 horas diárias exposto à cultura externa)", points: 4 },
-      { text: "Mais de 30 horas por semana (O ambiente digital é a principal influência diária)", points: 5 }
+      { text: "Menos de 1 hora por dia (controle bem rígido)", points: 1 },
+      { text: "De 1 a 2 horas por dia (tempo moderado)", points: 3 },
+      { text: "De 2 a 4 horas por dia (grande risco de influência externa)", points: 4 },
+      { text: "Mais de 4 horas por dia (o celular é o seu principal companheiro)", points: 5 }
     ]
   },
   {
     id: 4,
     category: "Confronto e Dúvida",
-    psyObjective: "Destrinchar um cenário de crise real para avaliar se o lar está preparado para acolher e responder às grandes perguntas de cosmovisão.",
-    behaviorLogic: "Simulação de situação real de alto estresse intelectual para gerar percepção de insuficiência.",
-    expectedImpact: "Reconhecimento de que falar 'porque a Bíblia diz' não é uma resposta suficiente para a geração atual.",
+    psyObjective: "Testar a habilidade de acolhimento parental sobre dúvidas lógicas.",
+    behaviorLogic: "Simular uma crise de fé para avaliar a preparação prática do pai.",
+    expectedImpact: "Reconhecer que respostas prontas não bastam hoje em dia.",
     title: "Interrogação Apologética",
-    subtitle: "O teste da dúvida existencial intelectual.",
-    question: "Se seu filho fizesse a pergunta: 'Papai/Mamãe, como nós sabemos de verdade que Deus existe se ninguém nunca o viu?', qual seria sua reação?",
+    subtitle: "Frente a uma dúvida racional sincera.",
+    question: "Se seu filho perguntar: 'Papai/Mamãe, como sabemos se Deus existe mesmo, se ninguém O vê?', qual sua reação?",
     options: [
-      { text: "Consigo responder de forma histórica, científica e filosófica profunda, convencendo-o racionalmente", points: 1 },
-      { text: "Sei responder basicamente, mas temo não ser profundo o suficiente para sanar uma dúvida real", points: 3 },
-      { text: "Usaria respostas espirituais padrão (ex: 'Sinta o vento, sinta o amor de Deus' ou 'Basta ler a Bíblia e crer')", points: 4 },
-      { text: "Ficaria desconfortável, tentaria mudar de assunto ou admitiria que não sei explicar", points: 5 }
+      { text: "Sei responder de forma simples, mas com argumentos lógicos fortes.", points: 1 },
+      { text: "Sei responder o básico, mas sinto que faltaria profundidade.", points: 3 },
+      { text: "Usaria respostas espirituais prontas (ex: 'Basta ter fé', 'Sinta o vento').", points: 4 },
+      { text: "Mudo de assunto ou confesso que não sei explicar.", points: 5 }
     ]
   },
   {
     id: 5,
     category: "Capacidade Parental",
-    psyObjective: "Expor a desconexão entre o dever teológico bíblico dos pais (Deuteronômio 6:7) e a realidade de dependência da Escola Dominical.",
-    behaviorLogic: "Ao confrontar o usuário com sua real capacidade apologética, quebramos a objeção de que a igreja local resolve sozinha a formação espiritual da criança.",
-    expectedImpact: "Sensação saudável de responsabilidade e necessidade urgente de capacitação parental.",
+    psyObjective: "Mostrar a necessidade urgente de capacitação em casa.",
+    behaviorLogic: "Chocar o usuário com o dever bíblico de ensinar ativamente.",
+    expectedImpact: "Desejo de se preparar melhor para blindar o herdeiro.",
     title: "Autoavaliação de Capacitação",
-    subtitle: "Avaliação do preparo para herança espiritual.",
-    question: "Qual o seu nível de preparo intelectual hoje para blindar seu filho contra os argumentos de professores ou colegas que dizem que a religião é um mito?",
+    subtitle: "Preparo para blindagem espiritual.",
+    question: "Qual o seu nível de preparo hoje para defender a fé do seu filho contra o ceticismo da escola ou internet?",
     options: [
-      { text: "Altamente preparado: Leio apologética e sei como refutar as principais teorias ateístas", points: 1 },
-      { text: "Preparado apenas espiritualmente: Tenho muita fé, mas não sei de argumentos científicos ou históricos", points: 3 },
-      { text: "Despreparado: Se meu filho entrar em um debate escolar, ele não terá argumentos para se defender com base no que eu o ensino", points: 5 },
-      { text: "Nunca parei para pensar nisso, achava que a igreja ou a escola integrada resolveriam", points: 4 }
+      { text: "Consigo rebater argumentos ateus e proteger a mente dele com calma.", points: 1 },
+      { text: "Tenho muita fé, mas não sei de provas históricas ou científicas.", points: 3 },
+      { text: "Despreparado: Se ele for desafiado na escola, não sei como ajudá-lo.", points: 5 },
+      { text: "Nunca parei para pensar nisso (achava que a igreja cuidaria de tudo).", points: 4 }
     ]
   },
   {
     id: 6,
     category: "Convicção",
-    psyObjective: "Colocar o filho na arena cultural e avaliar se a fé dele é autoritativa baseada em repetição (o quês) ou enraizada em convicções reais (por quês).",
-    behaviorLogic: "Questionar a sustentabilidade da fé infantil quando exposta ao ridículo social ou a teses acadêmicas agressivas.",
-    expectedImpact: "Apreensão diante da fragilidade de uma fé que é meramente 'ritualística' e não 'racional'.",
+    psyObjective: "Avaliar o comportamento social sob pressão cultural.",
+    behaviorLogic: "Colocar o filho em uma situação real de confronto na sala de aula.",
+    expectedImpact: "Apreensão com o risco do filho se silenciar e apostatar.",
     title: "O Teste da Arena de Valores",
-    subtitle: "Seu filho frente ao escárnio de convicções.",
-    question: "Imagine que um colega ou professor diz na sala de aula: 'A Bíblia foi reescrita por homens de poder para dominar as pessoas'. Como você acha que seu filho agiria?",
+    subtitle: "Seu filho diante do escárnio.",
+    question: "Imagine que um colega zombe dizendo que 'cultuar a Deus é besteira'. Como seu filho agiria?",
     options: [
-      { text: "Ele saberia explicar a confiabilidade dos manuscritos históricos e manteria sua fé baseada em evidências", points: 1 },
-      { text: "Ele ficaria calado com vergonha, guardando a dúvida em silêncio e corroendo sua fé internamente", points: 4 },
-      { text: "Ele concordaria com o colega, pois carece de bases intelectuais para entender a autoridade das Escrituras", points: 5 },
-      { text: "Ele tentaria defender a fé de forma ingênua ('É verdade porque sim'), gerando deboche por parte dos outros", points: 3 }
+      { text: "Saberia explicar o porquê de sua fé sem perder a postura racional.", points: 1 },
+      { text: "Ficaria calado com vergonha, guardando a dúvida no coração.", points: 4 },
+      { text: "Concordaria com o colega para ser aceito pelo grupo.", points: 5 },
+      { text: "Responderia de forma infantil ('Deus é real porque sim'), gerando mais deboche.", points: 3 }
     ]
   },
   {
     id: 7,
     category: "Influência",
-    psyObjective: "Mapear de forma fria e incontestável quem detém a atenção e a autoridade moral sobre o coração da criança.",
-    behaviorLogic: "Gera clareza sobre quais forças extrafamiliares estão esculpindo a mente da criança em termos de tempo relativo.",
-    expectedImpact: "Choque de realidade ao perceber a fragilidade da influência familiar contra o rolo compressor cultural.",
+    psyObjective: "Definição do real formador da mente do jovem.",
+    behaviorLogic: "Mapear o detentor do tempo intelectual ativo da prole.",
+    expectedImpact: "Surpresa com a predominância da mídia sobre o lar.",
     title: "Invasão Silenciosa de Valores",
-    subtitle: "O verdadeiro mentor moral do seu herdeiro.",
-    question: "Quem passa a maior fração de tempo transmitindo ideias sobre amor, justiça, sexualidade, evolução e espiritualidade para o seu filho toda semana?",
+    subtitle: "Quem ensina mais o seu filho por semana?",
+    question: "Quem passa a maior parte do tempo ensinando formas de pensar e valores ao seu filho toda semana?",
     options: [
-      { text: "A nossa família: Temos momentos devocionais sistemáticos e discussões éticas profundas em casa todos os dias", points: 1 },
-      { text: "A escola secular: Ele passa a maior parte do dia com professores cujo sistema de crenças é neutro ou oposto à fé", points: 4 },
-      { text: "A internet e os influenciadores digitais: Ele consome incessantemente o ponto de vista de estranhos sem valores cristãos", points: 5 },
-      { text: "Os amigos e o ciclo social próximo: O desejo de pertencer ao grupo molda suas opiniões morais", points: 3 }
+      { text: "A nossa família: Conversamos bastante e temos momentos devocionais.", points: 1 },
+      { text: "A escola secular: Passa o dia exposto a professores com visões contrárias.", points: 4 },
+      { text: "O celular/Internet: Ele consome canais, influenciadores e jogos sem parar.", points: 5 },
+      { text: "Os amigos e o ciclo social da rua ou da escola.", points: 3 }
     ]
   },
   {
     id: 8,
     category: "Valores",
-    psyObjective: "Avaliar o discernimento moral do filho frente às tendências contrárias à cosmovisão judaico-cristã nas redes sociais.",
-    behaviorLogic: "Neuromarketing de contraste: mostra como a inocência está sendo assediada de forma imperceptível através de entretenimento de aparência inocente.",
-    expectedImpact: "Preocupação quanto à facilidade do filho em absorver ideologias sorrateiras.",
+    psyObjective: "Perceber o nível de discernimento moral ativo.",
+    behaviorLogic: "Medir o filtro crítico contra agendas sutis nas telas.",
+    expectedImpact: "Desejo de equipar o filho com discernimento próprio.",
     title: "Filtro Crítico Ideológico",
-    subtitle: "Mapeamento de blindagem intelectual contra doutrinação oculta.",
-    question: "Quando seu filho assiste a um filme, série ou vídeo na internet que zomba de valores bíblicos básicos ou promove agendas anticristãs, qual o comportamento dele?",
+    subtitle: "Bloqueio contra agendas sutis nas telas.",
+    question: "Ao ver desenhos ou vídeos que zombam dos valores da Bíblia, como seu filho reage?",
     options: [
-      { text: "Ele detecta a ideologia instantaneamente e comenta comigo por que aquele pensamento está equivocado", points: 1 },
-      { text: "Ele assiste de maneira passiva, sem perceber que está consumindo conceitos que atacam sua própria crença", points: 4 },
-      { text: "Ele acha as ideias modernas muito mais 'legais' e 'justas' do que a visão tradicional que aprende em casa", points: 5 },
-      { text: "Eu não faço ideia, pois não acompanho de perto o teor de tudo o que ele consome na tela", points: 5 }
+      { text: "Ele percebe a maldade na hora e comenta comigo sobre o erro.", points: 1 },
+      { text: "Ele assiste passivamente, sem notar que o conteúdo ataca sua crença.", points: 4 },
+      { text: "Ele começa a achar essa visão moderna mais legal do que o ensino de casa.", points: 5 },
+      { text: "Eu não faço ideia, pois não consigo acompanhar de perto o que ele assiste.", points: 5 }
     ]
   },
   {
     id: 9,
     category: "Medo",
-    psyObjective: "Ativar e dar nome ao pior pesadelo de todo pai e mãe devoto: a apostasia silenciosa na juventude, gerando forte necessidade de prevenção ativa.",
-    behaviorLogic: "Tornar concreto o medo que costuma ser varrido para debaixo do tapete. A dor da perda espiritual futura se torna viva no presente.",
-    expectedImpact: "Comprometimento emocional extremo com a proteção ativa antes que seja tarde demais.",
+    psyObjective: "Vocalizar a dor última do distanciamento espiritual futuro.",
+    behaviorLogic: "Ancoragem com estatísticas de abandono para gerar intervenção preventiva.",
+    expectedImpact: "Engajamento completo com a solução protetora.",
     title: "Antecipação de Rota de Risco",
-    subtitle: "Medindo o perigo do afastamento espiritual.",
-    question: "Ao ver as estatísticas de que até 70% dos jovens de lares cristãos abandonam a igreja durante os anos de ensino médio ou faculdade, quão vulnerável seu filho está?",
+    subtitle: "A dor do afastamento de Deus.",
+    question: "Sabendo que 7 em cada 10 jovens criados na igreja abandonam a fé ao crescer, qual o risco do seu filho?",
     options: [
-      { text: "Seguro: Dei a ele bases inabaláveis e ele possui uma relação intelectual e pessoal sólida com Deus", points: 1 },
-      { text: "Vulnerável: Ele tem boa intenção hoje, mas se for confrontado por professores universitários eloquentes, ele pode se perder", points: 4 },
-      { text: "Em Risco: Ele já dá sinais claros de apatia espiritual, vergonha de falar de Jesus e preferência pelo profano", points: 5 },
-      { text: "Não gosto de pensar nisso, prefiro confiar que 'Deus cuidará' sem que eu precise agir em casa", points: 4 }
+      { text: "Seguro: Damos bases excelentes e temos ótima conversa em casa.", points: 1 },
+      { text: "Moderado: Ele é bonzinho hoje, mas temo as pressões do amanhã.", points: 4 },
+      { text: "Inquietante: Ele já mostra preguiça com a igreja e apego ao profano.", points: 5 },
+      { text: "Não sei: Prefiro confiar em Deus sem tomar atitudes práticas no lar.", points: 4 }
     ]
   },
   {
     id: 10,
     category: "Desejo",
-    psyObjective: "Gerar a transição lógica para a solução. O pai declara voluntariamente seu desejo por um recurso sistemático, abrindo caminho para a oferta.",
-    behaviorLogic: "Ao marcar sim para esta pergunta, o cérebro humano tenta permanecer coerente com suas declarações (Consistência e Compromisso de Cialdini).",
-    expectedImpact: "Anseio pelo surgimento do plano de ação ou método prático no fim do diagnóstico.",
+    psyObjective: "Abertura para o método de blindagem em família.",
+    behaviorLogic: "O pai declara ativa necessidade de suporte, preparando a mente para o resultado.",
+    expectedImpact: "Necessidade de obter o método prático agora.",
     title: "O Resgate da Convicção",
-    subtitle: "A oportunidade de pavimentar um legado espiritual indestrutível.",
-    question: "Se você tivesse acesso hoje a uma ferramenta prática que mostrasse o PORQUÊ a fé cristã é verdadeira, com linguagem feita sob medida para crianças, você utilizaria?",
+    subtitle: "Herança espiritual duradoura.",
+    question: "Se você tivesse acesso a materiais práticos de brincadeiras e lógicas cristãs infantis, você usaria no seu lar?",
     options: [
-      { text: "Com certeza absoluta: Seria minha prioridade investir tempo e dedicação para proteger o destino do meu filho", points: 1 },
-      { text: "Sim, se não tomar muito tempo da minha rotina corrida e for simples de aplicar", points: 2 },
-      { text: "Gostaria de conhecer primeiro, mas o futuro espiritual do meu filho é extremamente importante", points: 3 },
-      { text: "No momento não sinto que nosso lar precise de ajuda estruturada", points: 4 }
+      { text: "Com certeza absoluta! Quero blindar a alma e o futuro do meu herdeiro.", points: 1 },
+      { text: "Sim, se for rápido e fácil de encaixar na nossa rotina corrida.", points: 2 },
+      { text: "Gostaria de ver primeiro para entender o funcionamento.", points: 3 },
+      { text: "Não sinto urgência ou prefiro seguir as coisas do meu próprio jeito.", points: 4 }
     ]
   }
 ];
