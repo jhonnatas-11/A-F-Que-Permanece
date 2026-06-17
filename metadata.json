@@ -1,0 +1,6 @@
+{
+  "name": "A Fé Que Permanece",
+  "description": "Diagnóstico avançado para formação de convicções cristãs em crianças e painel estratégico de CRO.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
