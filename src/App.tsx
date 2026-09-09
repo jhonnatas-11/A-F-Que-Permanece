@@ -42,6 +42,13 @@ import {
 
 import { RiskLevel, QuizStage } from "./types";
 
+import {
+  trackQuizStarted,
+  trackQuizProgress,
+  trackDiagnosticCompleted,
+  trackOfferClicked,
+} from "./lib/pixel";
+
 export default function App() {
   // Quiz states: splash -> question -> loading -> result
   const [quizState, setQuizState] = useState<"splash" | "question" | "loading" | "result">("splash");
@@ -159,7 +166,9 @@ export default function App() {
   };
 
   // Animated loading calculation
-  const startLoadingAnalysis = () => {
+  // finalScore is passed in because setSimulatedScore hasn't flushed yet when
+  // this runs — reading the state here would report the previous score.
+  const startLoadingAnalysis = (finalScore: number) => {
     setQuizState("loading");
     setLoadingStep(0);
     const interval = setInterval(() => {
@@ -169,6 +178,7 @@ export default function App() {
           setTimeout(() => {
             playSuccessSound();
             setQuizState("result"); // Straight to results, no email barrier!
+            trackDiagnosticCompleted(calculateRiskLevel(finalScore), finalScore);
           }, 800);
           return prev;
         }
@@ -180,7 +190,8 @@ export default function App() {
   const handleSelectOption = (questionId: number, points: number) => {
     playAnswerSound();
     setAnswers(prev => ({ ...prev, [questionId]: points }));
-    
+    trackQuizProgress(currentQuestionIndex + 1, QUIZ_STAGES.length);
+
     setTimeout(() => {
       if (currentQuestionIndex < QUIZ_STAGES.length - 1) {
         setCurrentQuestionIndex(prev => prev + 1);
@@ -188,7 +199,7 @@ export default function App() {
         const numericValues = Object.values({ ...answers, [questionId]: points }) as number[];
         const totalPoints = numericValues.reduce((a, b) => a + b, 0);
         setSimulatedScore(totalPoints);
-        startLoadingAnalysis();
+        startLoadingAnalysis(totalPoints);
       }
     }, 320);
   };
@@ -298,6 +309,7 @@ export default function App() {
                     <button
                       onClick={() => {
                         playAnswerSound();
+                        trackQuizStarted();
                         setQuizState("question");
                       }}
                       className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-450 hover:to-orange-455 text-white font-bold px-8 py-4.5 rounded-2xl shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wider group border-b-2 border-orange-605"
@@ -612,7 +624,10 @@ export default function App() {
                     {/* VSL Direct purchase call */}
                     <div className="space-y-3 pt-3">
                       <button 
-                        onClick={() => alert(`Redirecionando para a área de matricula com o cupom de desconto do seu Diagnóstico!`)}
+                        onClick={() => {
+                          trackOfferClicked(activeRiskLabel);
+                          alert(`Redirecionando para a área de matricula com o cupom de desconto do seu Diagnóstico!`);
+                        }}
                         className="w-full bg-gradient-to-r from-amber-500 to-orange-550 hover:from-amber-450 hover:to-orange-500 text-white font-extrabold py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-xl shadow-orange-950/20 flex items-center justify-center gap-2 group text-xs sm:text-sm uppercase tracking-widest border-t border-white/20 cursor-pointer"
                       >
                         Garantir Vaga no Programa Completo + Brindes
